@@ -1,124 +1,90 @@
-Brain Tumor Segmentation using YOLOv11
+# Brain Tumor Segmentation using YOLOv11
 
-Overview
+## Overview
+This project utilizes the YOLOv11 model for segmentation tasks, specifically aimed at detecting and segmenting brain tumors in medical images. YOLOv11, an advanced version of the YOLO architecture, offers precise and efficient segmentation capabilities, making it a suitable choice for this challenging application.
 
-This project uses YOLOv11 for brain tumor segmentation, offering a cutting-edge deep learning-based solution for medical image analysis. By employing YOLOv11's powerful real-time object detection capabilities, we have tailored the model to accurately identify and segment brain tumors from MRI scans.
+---
 
-Features
+## Features
+- **Efficient Segmentation**: Leverages YOLOv11's advanced architecture for high accuracy.
+- **Custom Dataset**: Trained and validated on a specialized dataset of brain tumor images.
+- **End-to-End Pipeline**: Includes data preprocessing, model training, validation, and testing.
 
-High Accuracy Segmentation: Enhanced detection and precise segmentation of brain tumors.
+---
 
-Real-Time Processing: Efficient analysis suitable for real-time medical applications.
+## Dataset
+- **Link**: https://universe.roboflow.com/gazi-2anqt/brain-tumor-yzzav-ym6wa/dataset/1
 
-State-of-the-Art YOLOv11 Model: Utilizes advanced features of YOLOv11 for object detection and segmentation.
+---
 
-Prerequisites
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/brain-tumor-segmentation.git
+   cd brain-tumor-segmentation
+   ```
+   
+2. Download the dataset and place it in the `data/` directory.
 
-Python 3.8+
+---
 
-PyTorch 1.10+
+## Results
+![Example Output](results1.jpg)
 
-CUDA (for GPU acceleration)
+- **Precision**: 90.2%
+---
 
-Required Libraries: Install dependencies using:
+## Contributing
+Contributions are welcome! Please fork the repository and submit a pull request for review.
 
-pip install -r requirements.txt
+---
 
-Dataset
+## License
+This project is licensed under the [MIT License](LICENSE).
 
-This model was trained using a public MRI brain tumor dataset. Ensure your dataset is preprocessed and annotated according to the YOLO format before training.
+---
 
-Training
+# Beyin Tümörü Segmentasyonu YOLOv11 Kullanılarak
 
-To train the model:
+## Genel Bakış
+Bu proje, YOLOv11 modelini segmentasyon görevleri için kullanarak tıbbi görüntülerde beyin tümörlerini tespit ve segment etmeyi amaçlamaktadır. YOLO mimarisinin geliştirilmiş bir sürümü olan YOLOv11, bu zorlu uygulama için yüksek hassasiyet ve verimlilik sunar.
 
-python train.py --data data.yaml --cfg yolov11.yaml --weights yolov11.pth
+---
 
-Replace data.yaml with your dataset configuration file.
+## Özellikler
+- **Etkili Segmentasyon**: Yüksek doğruluk için YOLOv11'in gelişmiş mimarisi.
+- **Özel Veri Seti**: Beyin tümörü görüntülerinden oluşan özel bir veri seti üzerinde eğitildi ve doğrulandı.
+- **Uçtan Uca İşlem**: Veri ön işleme, model eğitimi, doğrulama ve test aşamalarını içerir.
 
-Inference
+---
 
-Run inference on MRI scans:
+## Veri Seti
+- **Bağlantı**: https://universe.roboflow.com/gazi-2anqt/brain-tumor-yzzav-ym6wa/dataset/1
 
-python detect.py --source /path/to/mri/images --weights yolov11.pth --output /path/to/save/results
+---
 
-The output will contain segmented tumor regions.
+## Kurulum
+1. Depoyu klonlayın:
+   ```bash
+   git clone https://github.com/yourusername/brain-tumor-segmentation.git
+   cd brain-tumor-segmentation
+   ```
+   
+2. Veri setini indirip `data/` dizinine yerleştirin.
 
-Results
+---
 
-Accuracy: 97% tumor segmentation accuracy on the test dataset.
+## Sonuçlar
+![Örnek Çıktı](results1.jpg)
 
-IoU (Intersection over Union): Achieved an IoU of 0.92.
+- **Hassasiyet**: %90.2
 
-Contributions
+---
 
-Developers: Mehmet Ozkaya and team.
+## Katkıda Bulunma
+Katkılar memnuniyetle karşılanır! Lütfen projeyi fork ederek inceleme için bir pull request gönderin.
 
-Contributions and issues are welcome. Please submit a pull request or open an issue.
+---
 
-License
-
-This project is licensed under the MIT License.
-
-Beyin Tümörü Segmentasyonu YOLOv11 Kullanarak
-
-Genel Bakış
-
-Bu projede, beyin tümörü segmentasyonu için YOLOv11 kullanılmış ve tıbbi görüntü analizine yönelik yenilikçi bir derin öğrenme tabanlı çözüm sunulmuştur. YOLOv11'in gerçek zamanlı nesne algılama yetenekleri ile model, MRI taramalarından beyin tümörlerini doğru bir şekilde tanımlamak ve segmentlemek için özelleştirildi.
-
-Özellikler
-
-Yüksek Doğruluk Segmentasyonu: Gelişmiş algılama ve hassas segmentasyon.
-
-Gerçek Zamanlı İşlem: Tıbbi uygulamalar için uygun verimli analiz.
-
-En Yeni YOLOv11 Modeli: Nesne algılama ve segmentasyon için YOLOv11'in gelişmiş özelliklerini kullanır.
-
-Gereksinimler
-
-Python 3.8+
-
-PyTorch 1.10+
-
-CUDA (GPU için)
-
-Gerekli Kütüphaneler: Bağımlıkları yüklemek için:
-
-pip install -r requirements.txt
-
-Veri Seti
-
-Model, kamuya açık bir MRI beyin tümörü veri seti kullanılarak eğitilmiştir. Eğitimden önce veri setinizi YOLO formatına göre ön işlemden geçirdiğinizden emin olun.
-
-Eğitim
-
-Modeli eğitmek için:
-
-python train.py --data data.yaml --cfg yolov11.yaml --weights yolov11.pth
-
-data.yaml dosyasını veri seti konfigürasyon dosyanızla değiştirin.
-
-Tahmin
-
-MRI taramalarında tahmin yapmak için:
-
-python detect.py --source /path/to/mri/images --weights yolov11.pth --output /path/to/save/results
-
-Çıktı, segmentlenmiş tümör bölgelerini içerecektir.
-
-Sonuçlar
-
-Doğruluk: Test veri setinde %97 segmentasyon doğruluğu.
-
-IoU (Kesişim Birleşimi Oranı): 0.92 IoU başarısı.
-
-Katkılar
-
-Geliştiriciler: Mehmet Ozkaya ve ekip.
-
-Katkılar ve sorunlar memnuniyetle karşılanır. Lütfen bir çekme isteği (pull request) veya sorun bildirimi (issue) gönderin.
-
-Lisans
-
-Bu proje MIT Lisansı altında lisanslanmıştır.
-
+## Lisans
+Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
